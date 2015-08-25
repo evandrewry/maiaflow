@@ -1,0 +1,33 @@
+body{
+    background-color: #000 !important;
+}
+.aiowps-site-lockout-body{
+    
+}
+
+.aiowps-site-lockout-body-content{
+    
+}
+
+.aiowps-site-lockout-box{
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    margin-top: 100px;
+    padding: 30px;
+}
+
+.aiowps-site-lockout-msg{
+    color: #FFF;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
