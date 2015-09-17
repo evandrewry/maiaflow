@@ -130,11 +130,20 @@
 		} );
 	}
 
-  var columns = [$('.col.left'), $('.col.middle'), $('.col.right')];
+  var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
+      postIndex = 0;
   $('.post').each(function(index) {
-    $(this).appendTo(columns[index%3][0]);
+    $(this).appendTo(columns[postIndex%3][0]);
+    postIndex++;
   });
   $(window).scroll(function(event) {
     $('.col.middle').css('margin-top', Math.max(0,$(this).scrollTop()/5 - $(this).height()/5))
   });
+  $( document.body ).on( 'post-load', function () {
+    $('.infinite-wrap .post').each(function(index) {
+      $(this).appendTo(columns[postIndex%3][0]);
+      postIndex++;
+    });
+
+  } );
 } )( jQuery );
