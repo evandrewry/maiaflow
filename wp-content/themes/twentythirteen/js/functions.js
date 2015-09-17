@@ -129,4 +129,12 @@
 			isRTL: body.is( '.rtl' )
 		} );
 	}
+
+  var columns = [$('.col.left'), $('.col.middle'), $('.col.right')];
+  $('.post').each(function(index) {
+    $(this).appendTo(columns[index%3][0]);
+  });
+  $(window).scroll(function(event) {
+    $('.col.middle').css('margin-top', Math.max(0,$(this).scrollTop()/5 - $(this).height()/5))
+  });
 } )( jQuery );

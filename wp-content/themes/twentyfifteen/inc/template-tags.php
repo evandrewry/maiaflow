@@ -88,22 +88,22 @@ function twentyfifteen_entry_meta() {
 			);
 		}
 
-		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
-		if ( $categories_list && twentyfifteen_categorized_blog() ) {
-			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-				_x( 'Categories', 'Used before category names.', 'twentyfifteen' ),
-				$categories_list
-			);
-		}
-
-		$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-				_x( 'Tags', 'Used before tag names.', 'twentyfifteen' ),
-				$tags_list
-			);
-		}
-	}
+#		$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
+#		if ( $categories_list && twentyfifteen_categorized_blog() ) {
+#			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+#				_x( 'Categories', 'Used before category names.', 'twentyfifteen' ),
+#				$categories_list
+#			);
+#		}
+#
+#		$tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfifteen' ) );
+#		if ( $tags_list ) {
+#			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+#				_x( 'Tags', 'Used before tag names.', 'twentyfifteen' ),
+#				$tags_list
+#			);
+#		}
+#	}
 
 	if ( is_attachment() && wp_attachment_is_image() ) {
 		// Retrieve attachment metadata.

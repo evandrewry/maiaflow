@@ -1,3 +1,83 @@
+.post {
+  display: none;
+}
+.col .post {
+   display: block;
+}
+.col {
+  width: 25%;
+  margin: 0 4%;
+  display: inline-block;
+  vertical-align: top;
+
+     -webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+}
+.col.left {
+}
+.col.middle {
+}
+.col.right {
+}
+.home-link-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: cornflowerblue;
+}
+.menu-main-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home-link {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  text-align: center;
+}
+ul.nav-menu {
+  padding: 0 !important;
+}
+.nav-menu li {
+  display: block !important;
+  text-align: center;
+}
+#navbar.open {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+#nav-toggle {
+  z-index: 100;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  width: 100px;
+  transform: translateX(-50%);
+}
+.site-main {
+  position: absolute !important;
+  top: 100%;
+  background-color: azure;
+}
+.entry-title {
+  font-size: 18px;
+}
+.entry-header {
+  text-align: center;
+}
+.content-header {
+  margin: 200px 0;
+  width: 100%;
+  text-align: center;
+}
 /*
 Theme Name: Twenty Thirteen
 Theme URI: https://wordpress.org/themes/twentythirteen/

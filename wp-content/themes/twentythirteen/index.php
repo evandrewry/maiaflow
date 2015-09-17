@@ -24,6 +24,12 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
+      <div class="content-header">
+        maiaflow
+      </div>
+      <div class="col left"></div>
+      <div class="col middle"></div>
+      <div class="col right"></div>
 
 			<?php twentythirteen_paging_nav(); ?>
 
