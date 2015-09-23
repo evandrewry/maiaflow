@@ -139,11 +139,84 @@
   $(window).scroll(function(event) {
     $('.col.middle').css('margin-top', Math.max(0,$(this).scrollTop()/5 - $(this).height()/5))
   });
-  $( document.body ).on( 'post-load', function () {
+  window.onInfiniteScrollDefault = function () {
     $('.infinite-wrap .post').each(function(index) {
       $(this).appendTo(columns[postIndex%3][0]);
       postIndex++;
     });
+  };
+  window.onInfiniteScroll = window.onInfiniteScrollDefault
+  $( document.body ).on( 'post-load', function() {
+    window.onInfiniteScroll();
+  });
 
-  } );
+  $('.site-main').css('margin-top', $(window).height());
+  $(window).on('resize', function() {
+    $('.site-main').css('margin-top', $(window).height());
+  });
+
+  if (!$('body').hasClass('home')) {
+    $('html,body').animate({scrollTop: $("#content").offset().top - 150}, 500);
+  }
+
 } )( jQuery );
+
+angular.module('maiaflow',['sticky'])
+  .directive('scrollToTop', function() {
+    var $ = jQuery;
+    return {
+      link: function(scope, elem, attr) {
+        elem.click(function() {
+          $('html,body').animate({scrollTop: $("#content").offset().top - 150}, 500);
+        });
+      }
+    };
+  })
+  //.directive('sticky', function() {
+  //  return {
+  //    link: function(scope, elem, attr) {
+  //      jQuery(window).scroll(function(event) {
+  //        if (elem.offset().top < jQuery(window).scrollTop() - 100) {
+  //          elem.css('position', 'fixed');
+  //          elem.css('top', '100px');
+  //          elem.css('padding', '0');
+  //        } else {
+  //          elem.css('position', '');
+  //          elem.css('top', '');
+  //          elem.css('padding', '');
+  //        }
+  //        console.log(jQuery(window).scrollTop(), elem.offset(), event);
+  //      });
+  //    }
+  //  };
+  //})
+  .directive('mfTagFilterToggle', function() {
+    var $ = jQuery;
+    var columns = [$('.col.left'), $('.col.middle'), $('.col.right')];
+    function filterTags(slug) {
+      var postIndex = 0;
+      $('.post').each(function(index) {
+        if ($(this).hasClass('tag-' + slug)) {
+          $(this).appendTo(columns[postIndex%3][0]).show();
+          postIndex++;
+        } else {
+          $(this).hide();
+        }
+      });
+      window.onInfiniteScroll = function () {
+        $('.infinite-wrap .post').each(function(index) {
+          if ($(this).hasClass('tag-' + slug)) {
+            $(this).appendTo(columns[postIndex%3][0]).show();
+            postIndex++;
+          } else {
+            $(this).hide();
+          }
+        });
+      };
+    }
+    return {
+      link: function(scope, elem, attr) {
+        elem.click(filterTags.bind(null, attr.mfTagFilterToggle))
+      }
+    };
+});

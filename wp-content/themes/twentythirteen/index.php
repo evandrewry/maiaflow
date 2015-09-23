@@ -24,9 +24,20 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
-      <div class="content-header">
+
+      <div style="height:200px;"></div>
+      <div class="content-header" sticky offset="150">
         maiaflow
+        <div class=content-header-tags">
+         <?php
+           $tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
+           foreach ( (array) $tags as $tag ) : ?>
+             <a mf-tag-filter-toggle="<?php echo $tag->slug; ?>" rel="tag"><?php echo $tag->name . ' (' . $tag->count . ')'; ?></a>
+
+         <?php endforeach;?>
+        </div>
       </div>
+      <div style="height:200px;"></div>
       <div class="col left"></div>
       <div class="col middle"></div>
       <div class="col right"></div>

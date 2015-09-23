@@ -1,6 +1,9 @@
 .post {
   display: none;
 }
+.single-post .post {
+  display: block;
+}
 .col .post {
    display: block;
 }
@@ -22,11 +25,14 @@
 }
 .col.right {
 }
+body {
+  background-color: cornflowerblue;
+}
 .home-link-container {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: cornflowerblue;
+  z-index: -1;
 }
 .menu-main-container {
   position: fixed;
@@ -62,9 +68,24 @@ ul.nav-menu {
   width: 100px;
   transform: translateX(-50%);
 }
+
+#nav-scroll {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  width: 100px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+body.home #nav-scroll {
+  display: block;
+}
 .site-main {
-  position: absolute !important;
-  top: 100%;
+  /*position: absolute !important;
+  width: 100%;
+  top: 100%;*/
+  position: static  !important;
   background-color: azure;
 }
 .entry-title {
@@ -74,9 +95,12 @@ ul.nav-menu {
   text-align: center;
 }
 .content-header {
-  margin: 200px 0;
+  padding: 0;
   width: 100%;
   text-align: center;
+}
+.infinite-wrap {
+  display: none;
 }
 /*
 Theme Name: Twenty Thirteen
