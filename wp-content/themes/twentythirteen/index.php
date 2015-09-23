@@ -27,7 +27,7 @@ get_header(); ?>
 
       <div style="height:200px;"></div>
       <div class="content-header" sticky offset="150">
-        maiaflow
+       <h1 class="site-title">maiaflow</h1>
         <div class=content-header-tags">
          <?php
            $tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
