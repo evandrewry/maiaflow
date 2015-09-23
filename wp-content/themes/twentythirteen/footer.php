@@ -18,10 +18,10 @@
       <div class="site-info">
 				<?php do_action( 'twentythirteen_credits' ); ?>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
+      </div><!-- .site-info -->
+-->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
--->
 	<?php wp_footer(); ?>
 </body>
 </html>
