@@ -251,7 +251,7 @@ a:hover {
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 h1,
@@ -949,6 +949,7 @@ img.wp-smiley,
 
 .site-header .site-title:hover {
 	/*text-decoration: underline;*/
+
 }
 
 .site-title {
