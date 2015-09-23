@@ -673,7 +673,7 @@ hr {
 button,
 input,
 textarea {
-	border: 2px solid #d4d0ba;
+	border: 2px solid #000;
 	font-family: inherit;
 	padding: 5px;
 }
@@ -694,13 +694,12 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-	background: #e05d22; /* Old browsers */
+	background: #fff; /* Old browsers */
 	background: -webkit-linear-gradient(top, #e05d22 0%, #d94412 100%); /* Chrome 10+, Safari 5.1+ */
 	background:   linear-gradient(to bottom, #e05d22 0%, #d94412 100%); /* W3C */
-	border: none;
-	border-bottom: 3px solid #b93207;
+	border: 3px solid #000;
 	border-radius: 2px;
-	color: #fff;
+	color: #000;
 	display: inline-block;
 	padding: 11px 24px 10px;
 	text-decoration: none;
@@ -976,7 +975,7 @@ div.nav-menu > ul {
 }
 
 .nav-menu li a {
-	color: #141412;
+	color: #000;
 	display: block;
 	font-size: 15px;
 	line-height: 1;
@@ -1042,7 +1041,7 @@ ul.nav-menu .focus > ul,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #bc360a;
+	color: #000000;
 	font-style: italic;
 }
 
@@ -1160,11 +1159,11 @@ ul.nav-menu .focus > ul,
 }
 
 .entry-meta a {
-	color: #bc360a;
+	color: #000000;
 }
 
 .entry-meta a:hover {
-	color: #bc360a;
+	color: #000000;
 }
 
 .entry-meta > span {
@@ -1238,7 +1237,7 @@ ul.nav-menu .focus > ul,
 
 .entry-content a,
 .comment-content a {
-	color: #bc360a;
+	color: #000000;
 }
 
 .entry-content a:hover,
@@ -1659,10 +1658,10 @@ footer.entry-meta {
 }
 
 .format-link .entry-title a {
-	color: #bc360a;
+	color: #000000;
 }
 
-.format-link div.entry-meta {
+.format-link div.entry-meta {
 	display: inline;
 }
 
@@ -2001,7 +2000,7 @@ footer.entry-meta {
 }
 
 .navigation a {
-	color: #bc360a;
+	color: #000000;
 }
 
 .navigation a:hover {
@@ -2316,7 +2315,7 @@ footer.entry-meta {
 .comment-author .url,
 .comment-reply-link,
 .comment-reply-login {
-	color: #bc360a;
+	color: #000000;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: normal;
@@ -2593,7 +2592,7 @@ footer.entry-meta {
 }
 
 .widget a {
-	color: #bc360a;
+	color: #000000;
 }
 
 .widget a:hover {
