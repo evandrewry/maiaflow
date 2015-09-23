@@ -991,7 +991,8 @@ div.nav-menu > ul {
 }
 
 .nav-menu li a {
-	color: #000;
+	background-color: #92A4B4;
+	color: #fff;
 	display: block;
 	font-size: 15px;
 	line-height: 1;
@@ -1003,7 +1004,7 @@ div.nav-menu > ul {
 .nav-menu li a:hover,
 .nav-menu li:focus > a,
 .nav-menu li a:focus {
-	background-color: #92A4B4;
+	background-color: #000000;
 	color: #fff;
 }
 
