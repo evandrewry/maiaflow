@@ -32,7 +32,7 @@ get_header(); ?>
          <?php
            $tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
            foreach ( (array) $tags as $tag ) : ?>
-             <a mf-tag-filter-toggle="<?php echo $tag->slug; ?>" rel="tag"><?php echo $tag->name . ' (' . $tag->count . ')'; ?></a>
+             <a mf-tag-filter-toggle="<?php echo $tag->slug; ?>" rel="tag"><?php echo $tag->name . ' '; ?></a>
 
          <?php endforeach;?>
         </div>
