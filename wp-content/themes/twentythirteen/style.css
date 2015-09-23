@@ -232,7 +232,7 @@ body {
 }
 
 a {
-	color: #ca3c08;
+	color: #000000;
 	text-decoration: none;
 }
 
@@ -710,8 +710,8 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
 	background: #fff; /* Old browsers */
-	background: -webkit-linear-gradient(top, #e05d22 0%, #d94412 100%); /* Chrome 10+, Safari 5.1+ */
-	background:   linear-gradient(to bottom, #e05d22 0%, #d94412 100%); /* W3C */
+	background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%); /* Chrome 10+, Safari 5.1+ */
+	background:   linear-gradient(to bottom, #ffffff 0%, #ffffff 100%); /* W3C */
 	border: 3px solid #000;
 	border-radius: 2px;
 	color: #000;
@@ -1666,7 +1666,7 @@ footer.entry-meta {
 }
 
 .format-link .entry-title {
-	color: #ca3c08;
+	color: #000000;
 	display: inline;
 	font: 300 italic 20px "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	margin-right: 20px;
@@ -1920,7 +1920,7 @@ footer.entry-meta {
 .attachment .entry-meta a,
 .attachment .entry-meta .edit-link:before,
 .attachment .full-size-link:before {
-	color: #ca3c08;
+	color: #000000;
 }
 
 .attachment .entry-content {
@@ -2077,7 +2077,7 @@ footer.entry-meta {
 
 .post-navigation {
 	background-color: #fff;
-	color: #ca3c08;
+	color: #000000;
 	font-size: 20px;
 	font-style: italic;
 	font-weight: 300;
@@ -2137,7 +2137,7 @@ footer.entry-meta {
 }
 
 .author-link {
-	color: #ca3c08;
+	color: #000000;
 	margin-left: 2px;
 }
 
