@@ -716,6 +716,7 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
+  background:none;
 	border-radius: 2px;
 	color: #000;
 	display: inline-block;
