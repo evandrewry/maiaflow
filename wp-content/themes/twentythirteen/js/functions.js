@@ -137,7 +137,7 @@
     postIndex++;
   });
   $(window).scroll(function(event) {
-    $('.col.middle').css('margin-top', Math.max(0,$(this).scrollTop()/5 - $(this).height()/5))
+    $('.col.middle').css('margin-top', Math.max(0,$(this).scrollTop()/8 - $(this).height()/5))
   });
   window.onInfiniteScrollDefault = function () {
     $('.infinite-wrap .post').each(function(index) {
