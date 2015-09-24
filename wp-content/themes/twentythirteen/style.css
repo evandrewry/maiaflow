@@ -1153,8 +1153,7 @@ ul.nav-menu .focus > ul,
 }
 
 .hvr-border-fade {
-  display: inline-block;
-  vertical-align: middle;
+
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
