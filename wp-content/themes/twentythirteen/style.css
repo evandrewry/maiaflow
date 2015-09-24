@@ -714,16 +714,13 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
-	/*background: #fff;*/
-	/*background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%); /* Chrome 10+, Safari 5.1+ */
-	/*background:   linear-gradient(to bottom, #ffffff 0%, #ffffff 100%); /* W3C */ */
-	background:transparent;
-  border: 3px solid #000;
 	border-radius: 2px;
 	color: #000;
 	display: inline-block;
 	padding: 11px 24px 10px;
 	text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
 }
 
 button:hover,
@@ -738,6 +735,8 @@ input[type="reset"]:focus {
 	background: -webkit-linear-gradient(top, #92A4C1 0%, #92A4C1 100%); /* Chrome 10+, Safari 5.1+ */
 	background:   linear-gradient(to bottom, #92A4C1 0%, #92A4C1 100%); /* W3C */
 	outline: none;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
 
 button:active,
