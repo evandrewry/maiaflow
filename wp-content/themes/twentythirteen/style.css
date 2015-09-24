@@ -1866,7 +1866,7 @@ footer.entry-meta {
  */
 
 .attachment .hentry {
-	background-color: #e8e5ce;
+	background-color: #;
 	margin: 0;
 	padding: 0;
 }
@@ -2026,7 +2026,7 @@ footer.entry-meta {
 }
 
 .paging-navigation {
-	background-color: #e8e5ce;
+	background-color: none;
 	padding: 40px 0;
 }
 
@@ -2153,7 +2153,7 @@ footer.entry-meta {
  */
 
 .archive-header {
-	background-color: #e8e5ce;
+	background-color: none;
 }
 
 .archive-title,
@@ -2184,7 +2184,7 @@ footer.entry-meta {
  */
 
 .page-header {
-	background-color: #e8e5ce;
+	background-color: none;
 }
 
 .page-title {
@@ -2228,7 +2228,7 @@ footer.entry-meta {
 }
 
 .error404 .page-title:before {
-	color: #e8e5ce;
+	color: #ffffff;
 	content: "\f423";
 	font-size: 964px;
 	line-height: 0.6;
@@ -2239,7 +2239,7 @@ footer.entry-meta {
 }
 
 .error404 .page-wrapper {
-	background-color: #e8e5ce;
+	background-color: #ffffff;
 }
 
 .error404 .page-header,
@@ -2676,7 +2676,7 @@ footer.entry-meta {
  */
 
 .site-footer {
-	background-color: #e8e5ce;
+	background-color: none;
 	color: #686758;
 	font-size: 14px;
 	text-align: center;
