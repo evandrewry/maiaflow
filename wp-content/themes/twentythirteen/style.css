@@ -717,7 +717,7 @@ input[type="reset"] {
 	/*background: #fff;*/
 	/*background: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%); /* Chrome 10+, Safari 5.1+ */
 	/*background:   linear-gradient(to bottom, #ffffff 0%, #ffffff 100%); /* W3C */ */
-	background-color:none;
+	background:transparent;
   border: 3px solid #000;
 	border-radius: 2px;
 	color: #000;
