@@ -14,7 +14,7 @@
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() && ! post_password_required() && ! is_attachment() && !is_single() ) : ?>
 		<div class="entry-thumbnail">
-			<?php the_post_thumbnail(); ?>
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 		</div>
 		<?php endif; ?>
 
