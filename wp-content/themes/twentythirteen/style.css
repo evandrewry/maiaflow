@@ -719,8 +719,8 @@ input[type="reset"] {
 	display: inline-block;
 	padding: 11px 24px 10px;
 	text-decoration: none;
-  transition: background-color 0.2s ease-out,
-              color 0.2s ease-out;
+  transition: background-color 0.7s ease-out,
+              color 0.7s ease-out;
 }
 
 button:hover,
@@ -735,8 +735,8 @@ input[type="reset"]:focus {
 	background: -webkit-linear-gradient(top, #92A4C1 0%, #92A4C1 100%); /* Chrome 10+, Safari 5.1+ */
 	background:   linear-gradient(to bottom, #92A4C1 0%, #92A4C1 100%); /* W3C */
 	outline: none;
-  transition: background-color 0.3s ease-in,
-              color 0.3s ease-in;
+  transition: background-color 0.7s ease-in,
+              color 0.7s ease-in;
 }
 
 button:active,
