@@ -43,7 +43,7 @@ body {
 }
 .menu-main-container {
   position: fixed;
-  top: 110px;
+  top: 119px;
   left: 50%;
   transform: translateX(-50%);
 }
