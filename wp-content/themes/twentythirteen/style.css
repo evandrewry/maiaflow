@@ -3,7 +3,7 @@ img.attachment-thumbnail,
 img.attachment-medium,
 img.attachment-large,
 img.attachment-full {
-  border: 10px #000;
+  border: 10px solid #000;
 }
 
 .aboutimg {
