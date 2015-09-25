@@ -7,7 +7,7 @@ img.attachment-full {
   -webkit-transition-property: outline; /* Safari */
   -webkit-transition-duration: .5s; /* Safari */
   transition-property: outline;
-  transition-duration: 1s;
+  transition-duration: .8s;
 }
 img.wp-post-image:hover,
 img.attachment-thumbnail:hover,
@@ -16,7 +16,7 @@ img.attachment-large:hover,
 img.attachment-full:hover {
   outline: 10px solid rgba(255,255,255,.5);
   transition-property: outline;
-  transition-duration: 1s;
+  transition-duration: .8s;
 
 }
 
