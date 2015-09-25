@@ -2,7 +2,7 @@
 #contactform input[type="email"],
 #contactform textarea{
   width: 90%;
-  background:rgba(255,255,255,.5);
+  background:transparent;
 }
 
 
