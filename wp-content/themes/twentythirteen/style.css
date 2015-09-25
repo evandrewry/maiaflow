@@ -3,10 +3,10 @@ img.attachment-thumbnail,
 img.attachment-medium,
 img.attachment-large,
 img.attachment-full {
-  border: none;
-  -webkit-transition-property: border; /* Safari */
+  outline: none;
+  -webkit-transition-property: outline; /* Safari */
   -webkit-transition-duration: .5s; /* Safari */
-  transition-property: border;
+  transition-property: outline;
   transition-duration: .5s;
 }
 
@@ -15,7 +15,7 @@ img.attachment-thumbnail:hover,
 img.attachment-medium:hover,
 img.attachment-large:hover,
 img.attachment-full:hover {
-  border: 10px solid #fff;
+  outline: 10px solid #fff;
 }
 
 .aboutimg {
