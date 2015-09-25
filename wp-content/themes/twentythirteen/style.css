@@ -3103,7 +3103,7 @@ footer.entry-meta {
 
 	.toggled-on .nav-menu > li a:hover,
 	.toggled-on .nav-menu > ul a:hover {
-		background-color: #92A4B4;
+		background-color: rgba(255,255,255,.5);
 		color: #fff;
 	}
 
