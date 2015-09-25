@@ -982,7 +982,7 @@ img.wp-smiley,
 }
 
 .site-header .home-link {
-	color: #141412;
+	color: #ffffff;
 	display: block;
 	margin: 0 auto;
 	max-width: 1080px;
@@ -1210,7 +1210,7 @@ ul.nav-menu .focus > ul,
 }
 
 .entry-title a {
-	color: #141412;
+	color: #ffffff;
 }
 
 .entry-title a:hover {
