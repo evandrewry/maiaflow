@@ -1,3 +1,11 @@
+img.wp-post-image,
+img.attachment-thumbnail,
+img.attachment-medium,
+img.attachment-large,
+img.attachment-full {
+  border: 10px #000;
+}
+
 .aboutimg {
   float:right;
   margin-left:10px;
