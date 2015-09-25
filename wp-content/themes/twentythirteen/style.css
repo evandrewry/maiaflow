@@ -3,7 +3,7 @@ img.attachment-thumbnail,
 img.attachment-medium,
 img.attachment-large,
 img.attachment-full {
-  outline: none;
+  outline: .5px solid rgba(255,255,255);
   -webkit-transition-property: outline; /* Safari */
   -webkit-transition-duration: .5s; /* Safari */
   transition-property: outline;
