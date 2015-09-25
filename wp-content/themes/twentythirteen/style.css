@@ -2,6 +2,8 @@
 #contactform input[type="email"],
 #contactform textarea{
   width: 100%;
+  padding:0;
+  margin:0;
 }
 
 
