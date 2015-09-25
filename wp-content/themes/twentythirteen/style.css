@@ -3,7 +3,11 @@ img.attachment-thumbnail,
 img.attachment-medium,
 img.attachment-large,
 img.attachment-full {
-  border: 10px solid #000;
+  border: none;
+  -webkit-transition-property: border; /* Safari */
+  -webkit-transition-duration: .5s; /* Safari */
+  transition-property: border;
+  transition-duration: .5s;
 }
 
 img.wp-post-image:hover,
