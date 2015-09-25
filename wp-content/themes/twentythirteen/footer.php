@@ -14,7 +14,8 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<?php get_sidebar( 'main' ); ?>
       <div class="site-info">
-				<?php do_action( 'twentythirteen_credits' ); ?>
+        <?php do_action( 'twentythirteen_credits' ); ?>
+          Maia Canter 2015
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
