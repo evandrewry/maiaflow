@@ -1104,7 +1104,8 @@ ul.nav-menu .focus > ul,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #000000;
+	color: #ffffff;
+  background-color: rgba(255,255,255,.2);
 	font-weight: bold;
 }
 
