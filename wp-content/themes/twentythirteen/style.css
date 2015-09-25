@@ -1,6 +1,10 @@
-#contactform input {
-width: 100%;
+#contactform input[type="text"],
+#contactform input[type="email"],
+#contactform textarea{
+  width: 100%;
 }
+
+
 
 img.wp-post-image,
 img.attachment-thumbnail,
