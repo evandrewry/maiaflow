@@ -46,6 +46,7 @@ img.attachment-full:hover {
 .content-header-tags a:hover {
   border-radius: 30px;
   background: rgba(145,173,195,.9);
+  padding: 2px 1px 2px 4px;
   color: #fff;
 }
 
