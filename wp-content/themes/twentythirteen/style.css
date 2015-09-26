@@ -43,7 +43,7 @@ img.attachment-full:hover {
   top:-300px;
 }
 
-.content-header-tags a:hover {
+.content-header-tags a:active {
   border-radius: 30px;
   background: rgba(145,173,195,.9);
   padding: 5px;
