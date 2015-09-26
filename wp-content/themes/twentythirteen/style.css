@@ -5,6 +5,10 @@
   background:transparent;
 }
 
+.infinite-loader{
+  background:transparent;
+}
+
 p {
   -moz-hyphens: none;
   -ms-hyphens: none;
