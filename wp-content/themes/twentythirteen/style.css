@@ -21,16 +21,16 @@ img.attachment-full {
   -webkit-transition-property: outline; /* Safari */
   -webkit-transition-duration: .5s; /* Safari */
   transition-property: outline;
-  transition-duration: .5s;
+  transition-duration: .4s;
 }
 img.wp-post-image:hover,
 img.attachment-thumbnail:hover,
 img.attachment-medium:hover,
 img.attachment-large:hover,
 img.attachment-full:hover {
-  outline: 10px solid rgba(255,255,255,.5);
+  outline: 10px solid rgba(145,173,195,.5);
   transition-property: outline;
-  transition-duration: .5s;
+  transition-duration: .4s;
 
 }
 
