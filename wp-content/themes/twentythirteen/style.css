@@ -34,6 +34,11 @@ img.attachment-full:hover {
 
 }
 
+.content-header-tags {
+  position:relative;
+  top:200px;
+}
+
 .aboutimg {
   float:right;
   margin-left:10px;
