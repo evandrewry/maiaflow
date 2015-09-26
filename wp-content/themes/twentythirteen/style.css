@@ -28,7 +28,7 @@ img.attachment-thumbnail:hover,
 img.attachment-medium:hover,
 img.attachment-large:hover,
 img.attachment-full:hover {
-  outline: 10px solid rgba(99,178,241,.5);
+  outline: 10px solid rgba(126,210,255,.3);
   transition-property: outline;
   transition-duration: .4s;
 
