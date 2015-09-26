@@ -43,6 +43,12 @@ img.attachment-full:hover {
   top:-300px;
 }
 
+.content-header-tags a:hover {
+  border-radius: 30px;
+  background: rgba(145,173,195,.9);
+  padding: 5px 5px 5px 7px;
+}
+
 .aboutimg {
   float:right;
   margin-left:10px;
