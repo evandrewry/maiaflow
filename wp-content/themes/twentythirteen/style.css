@@ -1050,8 +1050,7 @@ div.nav-menu > ul {
 .nav-menu li a:hover,
 .nav-menu li:focus > a,
 .nav-menu li a:focus {
-  background-color: rgba(145,173,195,.9);
-  border: 2px solid #fff;
+  background-color: rgba(145,173,195,.6);
   color: #fff;
 }
 
@@ -1105,9 +1104,9 @@ ul.nav-menu .focus > ul,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #ffffff;
-  background-color: rgba(255,255,255,.2);
-	font-weight: bold;
+	color: #fff;
+  background-color: rgba(145,173,195,.9);
+  border: 2px solid #fff;
 }
 
 .menu-toggle {
