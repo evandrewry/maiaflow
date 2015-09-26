@@ -1050,8 +1050,9 @@ div.nav-menu > ul {
 .nav-menu li a:hover,
 .nav-menu li:focus > a,
 .nav-menu li a:focus {
-	background-color: rgba(255,255,255,.2);
-	color: #fff;
+  background-color: rgba(145,173,195,.9);
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .nav-menu .sub-menu,
