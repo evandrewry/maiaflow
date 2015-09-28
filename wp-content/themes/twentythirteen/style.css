@@ -38,12 +38,27 @@ img.attachment-full:hover {
 
 }
 
+#content {
+  position: relative;
+}
 .content-header-tags {
-  position:relative;
-  top:-300px;
+  position: fixed;
+  left: 50%;
+  transform: translate3D(-50%, 0, 0);
+  z-index: 99;
+}
+.content-header-title {
+  position: fixed;
+  left: 50%;
+  transform: translate3D(-50%, 0, 0);
+  z-index: 99;
 }
 
-.content-header-tags a:hover {
+
+.content-header-tags a {
+  cursor: pointer;
+}
+.content-header-tags a.active {
   border-radius: 30px;
   background: rgba(145,173,195,.9);
   padding: 2px 1px 2px 4px;
@@ -83,21 +98,14 @@ img.attachment-full:hover {
 .col.right {
 }
 body {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9d2f3+0,b3bbd8+15 */
-  background: #a9d2f3; /* Old browsers */
-  background: -moz-linear-gradient(top, #a9d2f3 0%, #b3bbd8 15%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9d2f3), color-stop(15%,#b3bbd8)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #a9d2f3 0%,#b3bbd8 15%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #a9d2f3 0%,#b3bbd8 15%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #a9d2f3 0%,#b3bbd8 15%); /* IE10+ */
-  background: linear-gradient(to bottom, #a9d2f3 0%,#b3bbd8 15%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9d2f3', endColorstr='#b3bbd8',GradientType=0 ); /* IE6-9 */
+
 }
 
 .home-link-container {
   position: fixed;
-  height: 100%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
 }
 .menu-main-container {
@@ -127,7 +135,7 @@ ul.nav-menu {
   z-index: 100;
 }
 #nav-toggle {
-  z-index: 100;
+  z-index: 101;
   position: fixed;
   top: 50px;
   left: 50%;
@@ -146,6 +154,23 @@ ul.nav-menu {
 }
 body.home #nav-scroll {
   display: block;
+}
+#masthead {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9d2f3+0,b3bbd8+15 */
+  background: #a9d2f3; /* Old browsers */
+  background: -moz-linear-gradient(top, #a9d2f3 0%, #b3bbd8 50%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a9d2f3), color-stop(50%,#b3bbd8)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #a9d2f3 0%,#b3bbd8 50%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #a9d2f3 0%,#b3bbd8 50%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #a9d2f3 0%,#b3bbd8 50%); /* IE10+ */
+  background: linear-gradient(to bottom, #a9d2f3 0%,#b3bbd8 50%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9d2f3', endColorstr='#b3bbd8',GradientType=0 ); /* IE6-9 */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 .site-main {
   /*position: absolute !important;
@@ -999,7 +1024,6 @@ img.wp-smiley,
  */
 
 .site-header {
-	position: relative;
 }
 
 .site-header .home-link {
@@ -1007,10 +1031,9 @@ img.wp-smiley,
 	display: block;
 	margin: 0 auto;
 	max-width: 1080px;
-	min-height: 230px;
+	min-height: 0px;
 	padding: 0 20px;
 	text-decoration: none;
-	width: 100%;
 }
 
 .site-header .site-title:hover {
@@ -1019,11 +1042,11 @@ img.wp-smiley,
 }
 
 .site-title {
-	font-size: 60px;
-	font-weight: bold;
-	line-height: 1;
-	margin: 0;
-  padding: 200px 0px 10px;
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  /*padding: 200px 0px 10px;*/
   font-family: 'Shanti';
 }
 

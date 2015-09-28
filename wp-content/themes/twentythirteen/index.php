@@ -25,17 +25,15 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-      <div style="height:200px;"></div>
-      <div class="content-header" sticky offset="150">
-       <h1 class="site-title">maiaflow</h1>
+      <div class="content-header">
         <div class="content-header-tags">
          <?php
            $tags = get_tags( array('orderby' => 'count', 'order' => 'DESC') );
            foreach ( (array) $tags as $tag ) : ?>
-             <a mf-tag-filter-toggle="<?php echo $tag->slug; ?>" rel="tag"><?php echo $tag->name . ' '; ?></a>
-
+             <a ng-class="{active: activeTag == '<?php echo $tag->slug; ?>'}" mf-tag-filter-toggle="<?php echo $tag->slug; ?>" rel="tag"><?php echo $tag->name . ' '; ?></a>
          <?php endforeach;?>
         </div>
+        <h1 class="site-title content-header-title">maiaflow</h1>
       </div>
       <div style="height:200px;"></div>
       <div class="col left"></div>

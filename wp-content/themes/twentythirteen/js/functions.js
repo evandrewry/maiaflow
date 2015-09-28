@@ -130,19 +130,27 @@
 		} );
 	}
 
+//MAIA CUSTOM STUFF
   var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
-      postIndex = 0;
+      tags = $('.content-header-tags'),
+      contentTitle = $('.content-header-title'),
+      header = $('.site-header'),
+      homeLink = $('.home-link-container'),
+      navScroll = $('#nav-scroll'),
+      $win = $(window);
+  function shortestColumn() {
+    return columns.reduce(function(prev,curr) {
+      return curr.offset().top + curr.height() < prev.offset().top + prev.height() ? curr : prev;
+    }, columns[0]);
+  }
+
   $('.post').each(function(index) {
-    $(this).appendTo(columns[postIndex%3][0]);
-    postIndex++;
+    $(this).appendTo(shortestColumn());
   });
-  $(window).scroll(function(event) {
-    $('.col.middle').css('margin-top', Math.max(0,$(this).scrollTop()/2 - $(this).height()/2))
-  });
+
   window.onInfiniteScrollDefault = function () {
     $('.infinite-wrap .post').each(function(index) {
-      $(this).appendTo(columns[postIndex%3][0]);
-      postIndex++;
+      $(this).appendTo(shortestColumn());
     });
   };
   window.onInfiniteScroll = window.onInfiniteScrollDefault
@@ -150,9 +158,109 @@
     window.onInfiniteScroll();
   });
 
-  $('.site-main').css('margin-top', $(window).height());
+  var requestAnimationFrame = window.requestAnimationFrame ||
+                            window.mozRequestAnimationFrame ||
+                            window.webkitRequestAnimationFrame ||
+                            window.msRequestAnimationFrame;
+  //
+  // vendor prefix management
+  //
+  function getSupportedPropertyName(properties) {
+      for (var i = 0; i < properties.length; i++) {
+          if (typeof document.body.style[properties[i]] != "undefined") {
+              return properties[i];
+          }
+      }
+      return null;
+  }
+
+  var transforms = ["transform",
+                    "msTransform",
+                    "webkitTransform",
+                    "mozTransform",
+                    "oTransform"];
+  var transformProperty = getSupportedPropertyName(transforms);
+
+  var scrolling = false;
+  var mouseWheelActive = false;
+  var count = 0;
+
+  (function setup() {
+    window.addEventListener("scroll", setScrolling, false);
+    window.addEventListener("mousewheel", mouseScroll, false);
+    window.addEventListener("DOMMouseScroll", mouseScroll, false);
+    animationLoop();
+  })()
+
+  function mouseScroll() { mouseWheelActive = true; }
+  function setScrolling() { scrolling = true; }
+
+  //
+  // Cross-browser way to get the current scroll position
+  //
+  function getScrollPosition() {
+    if (document.documentElement.scrollTop == 0) {
+        return document.body.scrollTop;
+    } else {
+        return document.documentElement.scrollTop;
+    }
+  }
+
+  function animationLoop() {
+      // adjust the image's position when scrolling
+      if (scrolling) {
+        animateColumn();
+        animateTags();
+        animateHeader();
+        scrolling = false;
+      }
+
+      // scroll up or down by 10 pixels when the mousewheel is used
+
+      requestAnimationFrame(animationLoop);
+  }
+
+  function animateColumn() {
+    columns[1][0].style['margin-top'] = Math.max(0, getScrollPosition() - $win.height()) / 2 + 'px';
+  }
+  function getTagTransform(y) {
+    return 'translate3d(-50%, ' + y + 'px, 0)'
+  }
+  function animateTags() {
+    if(tags) {
+      tags[0].style[transformProperty] = getTagTransform(
+        Math.max(
+          150 - $win.height(),
+          - getScrollPosition() / 2 - $win.height() / 3
+        )
+      );
+      contentTitle[0].style[transformProperty] = getTagTransform(
+        Math.max(
+          -$win.height()/2 + contentTitle.height()/2,
+          - getScrollPosition() / 2 - contentTitle.height()/2
+        )
+      );
+    }
+  }
+
+  function getHeaderTransform(y) {
+    return 'translate3d(0, ' + y + 'px, 0)'
+  }
+  function animateHeader() {
+    if(tags) {
+      header[0].style[transformProperty] = getHeaderTransform(-getScrollPosition());
+      homeLink[0].style[transformProperty] = getTagTransform(getScrollPosition());
+      navScroll[0].style[transformProperty] = getTagTransform(getScrollPosition());
+    }
+  }
+
+
+
+  $('.site-main').css('margin-top', $(window).height() - 50);
+  $('.site-header').css('height', $(window).height());
   $(window).on('resize', function() {
-    $('.site-main').css('margin-top', $(window).height());
+    $('.site-main').css('margin-top', $(window).height() - 50);
+    $('.site-header').css('height', $(window).height());
   });
 
   if (!$('body').hasClass('home')) {
@@ -172,47 +280,39 @@ angular.module('maiaflow',['sticky'])
       }
     };
   })
-  //.directive('sticky', function() {
-  //  return {
-  //    link: function(scope, elem, attr) {
-  //      jQuery(window).scroll(function(event) {
-  //        if (elem.offset().top < jQuery(window).scrollTop() - 100) {
-  //          elem.css('position', 'fixed');
-  //          elem.css('top', '100px');
-  //          elem.css('padding', '0');
-  //        } else {
-  //          elem.css('position', '');
-  //          elem.css('top', '');
-  //          elem.css('padding', '');
-  //        }
-  //        console.log(jQuery(window).scrollTop(), elem.offset(), event);
-  //      });
-  //    }
-  //  };
-  //})
-  .directive('mfTagFilterToggle', function() {
+  .directive('mfTagFilterToggle', function($rootScope) {
     var $ = jQuery;
     var columns = [$('.col.left'), $('.col.middle'), $('.col.right')];
+    function shortestColumn() {
+      return columns.reduce(function(prev,curr) {
+        return curr.offset().top + curr.height() < prev.offset().top + prev.height() ? curr : prev;
+      }, columns[0]);
+    }
     function filterTags(slug) {
-      var postIndex = 0;
-      $('.post').each(function(index) {
+      function unfilterElements() {
+        $(this).appendTo(shortestColumn()).show();
+      }
+      function filterElements() {
         if ($(this).hasClass('tag-' + slug)) {
-          $(this).appendTo(columns[postIndex%3][0]).show();
-          postIndex++;
+          $(this).appendTo(shortestColumn()).show();
         } else {
           $(this).hide();
         }
-      });
-      window.onInfiniteScroll = function () {
-        $('.infinite-wrap .post').each(function(index) {
-          if ($(this).hasClass('tag-' + slug)) {
-            $(this).appendTo(columns[postIndex%3][0]).show();
-            postIndex++;
-          } else {
-            $(this).hide();
-          }
-        });
-      };
+      }
+      if ($rootScope.activeTag == slug) {
+        $rootScope.activeTag = undefined;
+        $('.post').hide();
+        $('.post').each(unfilterElements);
+        window.onInfiniteScroll = window.onInfiniteScrollDefault
+      } else {
+        $rootScope.activeTag = slug;
+        $('.post').hide();
+        $('.post').each(filterElements);
+        window.onInfiniteScroll = function () {
+          $('.infinite-wrap .post').each(filterElements);
+        };
+      }
+      $rootScope.$apply()
     }
     return {
       link: function(scope, elem, attr) {
