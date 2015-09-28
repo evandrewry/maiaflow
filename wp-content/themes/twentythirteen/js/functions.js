@@ -144,9 +144,11 @@
     }, columns[0]);
   }
 
-  $('.post').each(function(index) {
-    $(this).appendTo(shortestColumn());
-  });
+  if (columns[0][0]) {
+    $('.post').each(function(index) {
+      $(this).appendTo(shortestColumn());
+    });
+  }
 
   window.onInfiniteScrollDefault = function () {
     $('.infinite-wrap .post').each(function(index) {
@@ -221,13 +223,15 @@
   }
 
   function animateColumn() {
-    columns[1][0].style['margin-top'] = Math.max(0, getScrollPosition() - $win.height()) / 2 + 'px';
+    if(columns[1][0]) {
+      columns[1][0].style['margin-top'] = Math.max(0, getScrollPosition() - $win.height()) / 2 + 'px';
+    }
   }
   function getTagTransform(y) {
     return 'translate3d(-50%, ' + y + 'px, 0)'
   }
   function animateTags() {
-    if(tags) {
+    if(tags[0]) {
       tags[0].style[transformProperty] = getTagTransform(
         Math.max(
           150 - $win.height(),
@@ -247,7 +251,7 @@
     return 'translate3d(0, ' + y + 'px, 0)'
   }
   function animateHeader() {
-    if(tags) {
+    if(header) {
       header[0].style[transformProperty] = getHeaderTransform(-getScrollPosition());
       homeLink[0].style[transformProperty] = getTagTransform(getScrollPosition());
       navScroll[0].style[transformProperty] = getTagTransform(getScrollPosition());
