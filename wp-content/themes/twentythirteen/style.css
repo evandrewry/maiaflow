@@ -1256,6 +1256,8 @@ ul.nav-menu .focus > ul,
 
 .entry-title a {
 	color: #ffffff;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 500;
 }
 
 .entry-title a:hover {
