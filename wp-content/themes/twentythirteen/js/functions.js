@@ -254,6 +254,7 @@
     if(header) {
       header[0].style[transformProperty] = getHeaderTransform(-getScrollPosition());
       homeLink[0].style[transformProperty] = getTagTransform(getScrollPosition());
+      homeLink.fadeTo(0, ($win.height() - getScrollPosition() * 2) / $win.height());
       navScroll[0].style[transformProperty] = getTagTransform(getScrollPosition());
     }
   }
