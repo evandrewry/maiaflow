@@ -1252,6 +1252,10 @@ ul.nav-menu .focus > ul,
 .entry-title {
 	font-weight: normal;
 	margin: 0 0 5px;
+  color: #4C545F;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 500;
+
 }
 
 .entry-title a {
