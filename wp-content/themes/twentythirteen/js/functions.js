@@ -147,7 +147,7 @@
     function colHeight(col) {
       var h = col.height();
       if (col.hasClass('middle')) {
-        h += Math.max(0, col.height() - $win.height()) / 2;
+        h += col.height() / 2;
       }
       return h;
     }
