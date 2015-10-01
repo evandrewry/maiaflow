@@ -131,7 +131,8 @@
 	}
 
 //MAIA CUSTOM STUFF
-  window.orderedPosts = $('post').clone();
+  window.orderedPosts = [];
+  $('post').clone().each(orderedPosts.push.bind(orderedPosts));
   var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
       tags = $('.content-header-tags'),
       contentTitle = $('.content-header-title'),
