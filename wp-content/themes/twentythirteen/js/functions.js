@@ -144,8 +144,15 @@
       navScroll = $('#nav-scroll'),
       $win = $(window);
   function shortestColumn() {
+    function colHeight(col) {
+      var h = col.height();
+      if (col.hasClass('middle')) {
+        h += Math.max(0, col.height() - $win.height()) / 2;
+      }
+      return h;
+    }
     return columns.reduce(function(prev,curr) {
-      return curr.offset().top + curr.height() < prev.offset().top + prev.height() ? curr : prev;
+      return colHeight(curr) < colHeight(prev) ? curr : prev;
     }, columns[0]);
   }
 
