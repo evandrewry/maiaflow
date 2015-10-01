@@ -147,7 +147,9 @@
     function colHeight(col) {
       var h = col.height();
       if (col.hasClass('middle')) {
+        console.log(h);
         h += col.height();
+        console.log(h);
       }
       return h;
     }
