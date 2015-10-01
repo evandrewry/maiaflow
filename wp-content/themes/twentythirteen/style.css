@@ -1089,6 +1089,7 @@ div.nav-menu > ul {
 
 .nav-menu li a {
   background-color: rgba(140,175,230,.8);
+  font-family: 'Cabin', sans-serif;
   color: #fff;
 	display: block;
 	font-size: 15px;
@@ -2191,8 +2192,9 @@ footer.entry-meta {
 
 .post-navigation {
   background-color: rgba(255, 255, 255, 0.2);
-  color: #000000;
-	font-size: 16px;
+  color: #4C545F;
+  font-family: 'Cabin', sans-serif;
+	font-size: 14px;
   padding: 20px 0;
 }
 
