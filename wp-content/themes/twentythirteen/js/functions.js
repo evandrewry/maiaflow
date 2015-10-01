@@ -300,14 +300,14 @@ angular.module('maiaflow',['sticky'])
       }, columns[0]);
     }
     function filterTags(slug) {
-      function unfilterElements() {
-        $(this).appendTo(shortestColumn()).show();
+      function unfilterElements(post) {
+        post.appendTo(shortestColumn()).show();
       }
-      function filterElements() {
-        if ($(this).hasClass('tag-' + slug)) {
-          $(this).appendTo(shortestColumn()).show();
+      function filterElements(post) {
+        if (post.hasClass('tag-' + slug)) {
+          post.appendTo(shortestColumn()).show();
         } else {
-          $(this).hide();
+          post.hide();
         }
       }
       if ($rootScope.activeTag == slug) {
