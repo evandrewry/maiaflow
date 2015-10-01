@@ -331,9 +331,9 @@ angular.module('maiaflow',['sticky'])
         $('.post').hide();
         orderedPosts.map(filterElements);
         window.onInfiniteScroll = function () {
-          $('.infinite-wrap .post').each(function(elem) {
+          $('.infinite-wrap .post').each(function() {
             orderedPosts.push($(this).clone());
-            filterElements(elem);
+            filterElements($(this));
           });
         };
       }
