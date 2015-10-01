@@ -279,6 +279,7 @@
 
   $('.site-main').css('margin-top', $(window).height() - 50);
   $('.site-header').css('height', $(window).height());
+  $('#content').css('min-height', $(window).height());
   $(window).on('resize', function() {
     $('.site-main').css('margin-top', $(window).height() - 50);
     $('.site-header').css('height', $(window).height());
