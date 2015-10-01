@@ -205,7 +205,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#rgb(119,175,
 }
 
 @media screen and (max-width: 500px) {
-  .content-header-tags {
+  .content-header-tags, .col {
     display: none;
   }
   .post, .infinite-wrap, #infinite-footer{
