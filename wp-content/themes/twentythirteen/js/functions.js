@@ -158,23 +158,29 @@
     }, columns[0]);
   }
 
-  if (columns[0][0]) {
-    $('.post').each(function(index) {
-      $(this).appendTo(shortestColumn());
-    });
+  function isDesktop() {
+    return $win.width() > 500;
   }
 
-  window.onInfiniteScrollDefault = function () {
-    $('.infinite-wrap .post').each(function(index) {
-      orderedPosts.push($(this).clone());
-      console.log(orderedPosts);
-      $(this).appendTo(shortestColumn());
+  if ( isDesktop() ) {
+    if (columns[0][0]) {
+      $('.post').each(function(index) {
+        $(this).appendTo(shortestColumn());
+      });
+    }
+
+    window.onInfiniteScrollDefault = function () {
+      $('.infinite-wrap .post').each(function(index) {
+        orderedPosts.push($(this).clone());
+        console.log(orderedPosts);
+        $(this).appendTo(shortestColumn());
+      });
+    };
+    window.onInfiniteScroll = window.onInfiniteScrollDefault
+    $( document.body ).on( 'post-load', function() {
+      window.onInfiniteScroll();
     });
-  };
-  window.onInfiniteScroll = window.onInfiniteScrollDefault
-  $( document.body ).on( 'post-load', function() {
-    window.onInfiniteScroll();
-  });
+  }
 
   var requestAnimationFrame = window.requestAnimationFrame ||
                             window.mozRequestAnimationFrame ||
