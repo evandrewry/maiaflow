@@ -135,6 +135,7 @@
   $('post').each(function(post) {
     orderedPosts.push(post.clone());
   })
+  console.log(orderedPosts);
   var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
       tags = $('.content-header-tags'),
       contentTitle = $('.content-header-title'),
