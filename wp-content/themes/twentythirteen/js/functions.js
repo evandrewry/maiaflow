@@ -132,8 +132,8 @@
 
 //MAIA CUSTOM STUFF
   window.orderedPosts = [];
-  $('.post').each(function(post) {
-    orderedPosts.push(post.clone());
+  $('.post').each(function() {
+    orderedPosts.push($(this).clone());
   })
   console.log(orderedPosts);
   var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
