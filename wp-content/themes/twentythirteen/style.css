@@ -3171,11 +3171,6 @@ footer.entry-meta {
 		color: #fff;
 	}
 
-	ul.nav-menu,
-	div.nav-menu > ul {
-		display: none;
-	}
-
 	#content .featured-gallery {
 		padding-left: 24px;
 	}
