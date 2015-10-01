@@ -20,10 +20,6 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
 
       <div class="content-header">
         <div class="content-header-tags">
@@ -36,6 +32,12 @@ get_header(); ?>
         <h1 class="site-title content-header-title">maiaflow</h1>
       </div>
       <div style="height:200px;"></div>
+
+			<?php /* The loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
+
       <div class="col left"></div>
       <div class="col middle"></div>
       <div class="col right"></div>
