@@ -81,7 +81,7 @@ img.attachment-full:hover {
 }
 .col {
   width: 25%;
-  margin: 0 4%;
+  margin: 0 4.167%;
   display: inline-block;
   vertical-align: top;
 
@@ -96,6 +96,7 @@ img.attachment-full:hover {
 .col.middle {
 }
 .col.right {
+  margin-right: 0;
 }
 body {
 
