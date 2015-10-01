@@ -208,7 +208,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#rgb(119,175,
   .content-header-tags {
     display: none;
   }
-  .post {
+  .post, .infinite-wrap, #infinite-footer{
     display: block;
   }
 }

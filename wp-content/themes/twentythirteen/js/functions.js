@@ -135,7 +135,6 @@
   $('.post').each(function() {
     orderedPosts.push($(this).clone());
   })
-  console.log(orderedPosts);
   var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
       tags = $('.content-header-tags'),
       contentTitle = $('.content-header-title'),
@@ -147,9 +146,7 @@
     function colHeight(col) {
       var h = col.height();
       if (col.hasClass('middle')) {
-        console.log(h);
         h += col.height();
-        console.log(h);
       }
       return h;
     }
@@ -172,7 +169,6 @@
     window.onInfiniteScrollDefault = function () {
       $('.infinite-wrap .post').each(function(index) {
         orderedPosts.push($(this).clone());
-        console.log(orderedPosts);
         $(this).appendTo(shortestColumn());
       });
     };
