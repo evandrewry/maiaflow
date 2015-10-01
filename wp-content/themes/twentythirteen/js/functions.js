@@ -132,7 +132,7 @@
 
 //MAIA CUSTOM STUFF
   window.orderedPosts = [];
-  $('post').each(function(post) {
+  $('.post').each(function(post) {
     orderedPosts.push(post.clone());
   })
   console.log(orderedPosts);
