@@ -289,7 +289,7 @@ angular.module('maiaflow',['sticky'])
   })
   .directive('mfTagFilterToggle', function($rootScope) {
     var $ = jQuery,
-        columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
+        columns = [$('.col.left'), $('.col.middle'), $('.col.right')];
     function shortestColumn() {
       return columns.reduce(function(prev,curr) {
         return curr.offset().top + curr.height() < prev.offset().top + prev.height() ? curr : prev;
