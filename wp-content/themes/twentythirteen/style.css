@@ -81,7 +81,7 @@ img.attachment-full:hover {
 }
 .col {
   width: 25%;
-  margin: 0 4.167%;
+  margin: 0 4%;
   display: inline-block;
   vertical-align: top;
 
@@ -3180,6 +3180,7 @@ footer.entry-meta {
 		margin-right: 0;
 		width: 100%;
 	}
+
 
 	.format-quote blockquote,
 	.format-status .entry-content {
