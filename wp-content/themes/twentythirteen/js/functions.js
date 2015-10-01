@@ -154,6 +154,7 @@
   window.onInfiniteScrollDefault = function () {
     $('.infinite-wrap .post').each(function(index) {
       orderedPosts.push($(this).clone());
+      console.log(orderedPosts);
       $(this).appendTo(shortestColumn());
     });
   };
