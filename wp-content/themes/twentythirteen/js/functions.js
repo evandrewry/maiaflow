@@ -132,6 +132,7 @@
 
 //MAIA CUSTOM STUFF
   var columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
+      orderedPosts = $('post').clone(),
       tags = $('.content-header-tags'),
       contentTitle = $('.content-header-title'),
       header = $('.site-header'),
@@ -152,6 +153,7 @@
 
   window.onInfiniteScrollDefault = function () {
     $('.infinite-wrap .post').each(function(index) {
+      orderedPosts.push($(this).clone());
       $(this).appendTo(shortestColumn());
     });
   };
@@ -286,8 +288,8 @@ angular.module('maiaflow',['sticky'])
     };
   })
   .directive('mfTagFilterToggle', function($rootScope) {
-    var $ = jQuery;
-    var columns = [$('.col.left'), $('.col.middle'), $('.col.right')];
+    var $ = jQuery,
+        columns = [$('.col.left'), $('.col.middle'), $('.col.right')],
     function shortestColumn() {
       return columns.reduce(function(prev,curr) {
         return curr.offset().top + curr.height() < prev.offset().top + prev.height() ? curr : prev;
@@ -307,14 +309,17 @@ angular.module('maiaflow',['sticky'])
       if ($rootScope.activeTag == slug) {
         $rootScope.activeTag = undefined;
         $('.post').hide();
-        $('.post').each(unfilterElements);
+        orderedPosts.map(unfilterElements);
         window.onInfiniteScroll = window.onInfiniteScrollDefault
       } else {
         $rootScope.activeTag = slug;
         $('.post').hide();
-        $('.post').each(filterElements);
+        orderedPosts.map(filterElements);
         window.onInfiniteScroll = function () {
-          $('.infinite-wrap .post').each(filterElements);
+          $('.infinite-wrap .post').each(function(elem) {
+            orderedPosts.push($(this).clone());
+            filterElements(elem);
+          });
         };
       }
       $rootScope.$apply()
