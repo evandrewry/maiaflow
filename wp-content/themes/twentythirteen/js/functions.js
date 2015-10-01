@@ -279,7 +279,6 @@
 
   $('.site-main').css('margin-top', $(window).height() - 50);
   $('.site-header').css('height', $(window).height());
-  $('#content').css('min-height', $(window).height() * 2);
   $(window).on('resize', function() {
     $('.site-main').css('margin-top', $(window).height() - 50);
     $('.site-header').css('height', $(window).height());
@@ -321,6 +320,7 @@ angular.module('maiaflow',['sticky'])
           post.hide();
         }
       }
+      $('#content').css('min-height', $(window).height() * 2);
       if ($rootScope.activeTag == slug) {
         $rootScope.activeTag = undefined;
         $('.post').hide();
@@ -337,6 +337,7 @@ angular.module('maiaflow',['sticky'])
           });
         };
       }
+      $('#content').css('min-height', '');
       $rootScope.$apply()
     }
     return {
