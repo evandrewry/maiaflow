@@ -4,10 +4,10 @@ Theme URI: https://wordpress.org/themes/twentyfifteen/
 Author: the WordPress team
 Author URI: https://wordpress.org/
 Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
-Version: 1.3
+Version: 1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 Text Domain: twentyfifteen
 
 This theme, like WordPress, is licensed under the GPL.
@@ -123,6 +123,10 @@ td {
 	text-align: left;
 }
 
+fieldset {
+	min-width: inherit;
+}
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -208,9 +212,8 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
+	font-family: "Noto Serif", serif;
+	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
 }
@@ -267,9 +270,8 @@ blockquote small {
 	color: #333;
 	font-size: 15px;
 	font-size: 1.5rem;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
+	font-family: "Noto Sans", sans-serif;
+	line-height: 1.6;
 }
 
 blockquote em,
@@ -452,23 +454,23 @@ del {
 
 ::-webkit-input-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 }
 
 :-moz-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 }
 
 ::-moz-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	opacity: 1; /* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 }
 
 
@@ -539,7 +541,7 @@ input[type="submit"] {
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -607,7 +609,7 @@ textarea:focus {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	display: block;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -703,7 +705,7 @@ a:focus {
 .main-navigation .menu-item-description {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -953,7 +955,7 @@ a:focus {
 .post-navigation .meta-nav {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	letter-spacing: 0.04em;
@@ -1007,7 +1009,7 @@ a:focus {
 .pagination {
 	background-color: #fff;
 	border-top: 1px solid rgba(51, 51, 51, 0.1);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 }
 
 .pagination .nav-links {
@@ -1090,7 +1092,7 @@ a:focus {
 	color: rgba(51, 51, 51, 0.7);
 	font-size: 12px;
 	font-size: 1.2rem;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-weight: 700;
 	line-height: 1.5;
 	text-transform: uppercase;
@@ -1306,7 +1308,7 @@ img.aligncenter {
 }
 
 .site-title {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 22px;
 	font-size: 2.2rem;
 	font-weight: 700;
@@ -1314,9 +1316,18 @@ img.aligncenter {
 	margin-bottom: 0;
 }
 
+.custom-logo {
+	max-height: 84px;
+	width: auto;
+}
+
+.wp-custom-logo .site-title {
+	margin-top: 0.545454545em;
+}
+
 .site-description {
 	display: none;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -1380,7 +1391,7 @@ img.aligncenter {
 
 .widget-title {
 	color: #333;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	margin: 0 0 1.6em;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
@@ -1521,7 +1532,7 @@ img.aligncenter {
 
 .widget_rss .rss-date,
 .widget_rss cite {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-style: normal;
@@ -1790,7 +1801,7 @@ a.post-thumbnail:focus {
 .author-heading {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	letter-spacing: 0.04em;
@@ -1845,7 +1856,7 @@ a.post-thumbnail:focus {
 	background-color: #f7f7f7;
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2020,7 +2031,7 @@ a.post-thumbnail:focus {
 
 .page-links {
 	clear: both;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	margin-bottom: 1.3333em;
 }
 
@@ -2078,7 +2089,7 @@ a.post-thumbnail:focus {
 .entry-caption {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	-webkit-hyphens: auto;
@@ -2217,7 +2228,7 @@ a.post-thumbnail:focus {
 .pingback .edit-link {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2282,7 +2293,7 @@ a.post-thumbnail:focus {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	display: inline-block;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-weight: 700;
 	line-height: 1;
 	margin-top: 2em;
@@ -2304,7 +2315,7 @@ a.post-thumbnail:focus {
 .comment-form label {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -2327,7 +2338,7 @@ a.post-thumbnail:focus {
 .form-allowed-tags {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2343,7 +2354,7 @@ a.post-thumbnail:focus {
 	border-top: 1px solid rgba(51, 51, 51, 0.1);
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-weight: 700;
 	padding-top: 1.6em;
 }
@@ -2494,7 +2505,7 @@ p > video {
 .wp-caption-text {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2558,7 +2569,7 @@ p > video {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	display: block;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2614,7 +2625,7 @@ p > video {
 .widecolumn .mu_register label {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -3085,6 +3096,14 @@ p > video {
 		font-size: 29px;
 		font-size: 2.9rem;
 		line-height: 1.2069;
+	}
+
+	.custom-logo {
+		max-height: 105px;
+	}
+
+	.wp-custom-logo .site-title {
+		margin-top: 0.482758621em;
 	}
 
 	.site-description {
@@ -3707,6 +3726,14 @@ p > video {
 		font-size: 32px;
 		font-size: 3.2rem;
 		line-height: 1.25;
+	}
+
+	.custom-logo {
+		max-height: 104px;
+	}
+
+	.wp-custom-logo .site-title {
+		margin-top: 0.5em;
 	}
 
 	.site-description {
@@ -4344,6 +4371,14 @@ p > video {
 		line-height: 1.3636;
 	}
 
+	.custom-logo {
+		max-height: none;
+	}
+
+	.wp-custom-logo .site-title {
+		margin-top: 0.545454545em;
+	}
+
 	.site-description {
 		font-size: 12px;
 		font-size: 1.2rem;
@@ -4963,6 +4998,10 @@ p > video {
 		line-height: 1.1667;
 	}
 
+	.wp-custom-logo .site-title {
+		margin-top: 0.583333333em;
+	}
+
 	.site-description {
 		font-size: 14px;
 		font-size: 1.4rem;
@@ -5499,6 +5538,10 @@ p > video {
 		font-size: 27px;
 		font-size: 2.7rem;
 		line-height: 1.1852;
+	}
+
+	.wp-custom-logo .site-title {
+		margin-top: 0.592592593em;
 	}
 
 	.site-description {

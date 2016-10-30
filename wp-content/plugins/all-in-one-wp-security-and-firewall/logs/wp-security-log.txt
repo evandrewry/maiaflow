@@ -1,0 +1,2 @@
+[10/30/2016 1:46 AM] - FAILURE : Delete operation of .htaccess file failed!
+[10/30/2016 1:46 AM] - FAILURE : AIOWPSecurity_Configure_Settings::turn_off_all_firewall_rules() - Could not write to the .htaccess file. Please check the file permissions.

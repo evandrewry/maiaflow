@@ -3443,3 +3443,7 @@ footer.entry-meta {
 		color: #333;
 	}
 }
+
+nav.paging-navigation {
+  display: none;
+}
