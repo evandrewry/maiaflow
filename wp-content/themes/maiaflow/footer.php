@@ -15,7 +15,7 @@
 			<?php get_sidebar( 'main' ); ?>
       <div class="site-info">
         <?php do_action( 'twentythirteen_credits' ); ?>
-          Maia Canter 2016
+          Maia Canter 2018
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
