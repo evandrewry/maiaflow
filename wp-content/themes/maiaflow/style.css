@@ -1088,7 +1088,7 @@ div.nav-menu > ul {
 }
 
 .nav-menu li a {
-  background-color: rgba(140,175,230,.8);
+  background-color: rgba(155,153,169,.8);
   font-family: 'Karla', sans-serif;
   color: #fff;
 	display: block;
@@ -2805,7 +2805,8 @@ footer.entry-meta {
 }
 
 .site-footer .sidebar-container {
-	background-color: #220e10;
+	background-color: #686675;
+	color:#ffffff;
 	padding: 20px 0;
 }
 
