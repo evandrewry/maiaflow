@@ -2774,7 +2774,8 @@ footer.entry-meta {
 }
 
 .site-footer .widget_calendar tbody td {
-	background-color: rgba(255, 255, 255, 0.05);
+	background-color: #686675;
+	color:#ffffff;
 }
 
 .widget_calendar tbody .pad, .site-footer .widget_calendar tbody .pad {
