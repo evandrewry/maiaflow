@@ -15,7 +15,7 @@
 			<?php get_sidebar( 'main' ); ?>
       <div class="site-info">
         <?php do_action( 'twentythirteen_credits' ); ?>
-          © 2020 Maia Canter
+          Maia Canter 2018
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
